@@ -10,7 +10,7 @@ Rails.application.configure do
   config.action_mailer.default :charset => "utf-8"
 
   config.action_mailer.smtp_settings = {
-  address: "smtp.mail.yahoo.com",
+  address: "smtp.yahoo.com",
   port: 465,
   domain: ENV["EMAIL_DOMAIN"],
   authentication: "plain",
