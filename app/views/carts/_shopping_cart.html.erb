@@ -20,15 +20,6 @@
 <% end %>
 
 
-<script>
-  function input(){
-    var cardNumber = prompt("Enter credit cart number:","");
-    if(cardNumber != null){
-      $("#checkout").modal('hide');
-      location.replace("http://cs112.francis.ph");
-    }
-  }
-</script>
 
 
 <div class="modal fade" id="checkout" tabindex="-1" role="dialog" aria-labelledby="checkout" aria-hidden="true">
@@ -52,3 +43,16 @@
     </div>
   </div>
 </div>
+
+<script>
+  function input(){
+    var cardNumber = prompt("Enter credit cart number:","");
+
+    if(cardNumber.length > 0){
+      $("#checkout").modal('hide');
+      location.replace("http://cs112.francis.ph");
+      //location.reload();
+      //clearer method
+    }
+  }
+</script>

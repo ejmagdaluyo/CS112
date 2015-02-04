@@ -3,7 +3,11 @@ class CartsController < ApplicationController
 		@order_items = current_order.order_items
   end
   
-  def destroy
-  	session[:order_id] = nil
+  def clearer
+  	@order = current_order
+    @order_items.each do |oi|
+      oi.destroy
+  	end
   end
+  helper_method :clearer
 end
