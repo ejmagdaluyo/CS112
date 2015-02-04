@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.delete_all
+Product.create! id: 1, name: "Exalted Demon Eater", price: 30.00, quantity: 10, active: true
+Product.create! id: 2, name: "Fiery Soul of the Fire Slayer", price: 16.79, quantity: 10, active: true
+Product.create! id: 3, name: "Random Rare", price: 1.99, quantity: 50, active: true
+
+OrderStatus.delete_all
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Completed"
+OrderStatus.create! id: 4, name: "Cancelled"

@@ -1,0 +1,5 @@
+<%= product.name %>
+<%= form_for order_item, remote: true do |f| %>
+	<%= f.number_field :quantity, value: order_item.quantity.to_i, disabled: true %>
+	Price: <span style="color:green"><%= number_to_currency order_item.total_price %></span><p/><p/>
+<% end %>

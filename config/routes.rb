@@ -1,8 +1,28 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'welcome/index'
+  #get 'order_items/create'
 
-root 'welcome#index'
+  #get 'order_items/update'
+
+  #get 'order_items/destroy'
+
+  #get 'carts/show'
+
+  #get 'products/index'
+
+  #devise_for :users
+  #get 'welcome/index'
+
+#root 'welcome#index'
+
+  devise_for :users
+  #get 'products/index'
+
+  resources :products, only: [:index]
+  resource :cart, only: [:show, :destroy]
+  resources :order_items, only: [:create, :update, :destroy]
+  root to: "products#index"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
